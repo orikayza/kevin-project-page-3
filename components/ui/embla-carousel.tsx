@@ -4,9 +4,9 @@ import Image from "next/image";
 
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
-import { DotButton, useDotButton } from "./embla-carousel-dot-botton";
+// import { DotButton, useDotButton } from "./embla-carousel-dot-botton";
 
-import { cn } from "@/lib/utils";
+// import { cn } from "@/lib/utils";
 
 type PropType = {
   options?: EmblaOptionsType;
@@ -38,8 +38,8 @@ export function EmblaCarousel(props: PropType) {
   ];
 
   const [emblaRef, emblaApi] = useEmblaCarousel(options);
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi);
+  // const { selectedIndex, scrollSnaps, onDotButtonClick } =
+  //   useDotButton(emblaApi);
 
   return (
     <div>
@@ -84,21 +84,21 @@ export function EmblaCarousel(props: PropType) {
         </div>
       </div>
 
-      {/* Carousel dots-button container */}
+      {/* Carousel dots-button container
       <div className="flex justify-center gap-x-5.5 pt-6">
         {scrollSnaps.map((_, i) => (
           <DotButton
             key={i}
             onClick={() => onDotButtonClick(i)}
             className={cn(
-              // Carousel each-dots
+              Carousel each-dots
               "cursor-pointer rounded-full border-2 border-white p-1.5",
-              // Carousel selected-dot which current slide
+              Carousel selected-dot which current slide
               i === selectedIndex && "border-cyan-400",
             )}
           />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
